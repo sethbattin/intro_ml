@@ -1,0 +1,10 @@
+This data is an example set from the first chapter of _An Introduction to Machine Learning_.  It classifies pies that Johnny likes.
+
+It has 12 examples, 6 positive and 6 negative.
+
+It has 5 attributes:
+1. Shape:         Circle, Triangle, Square
+2. Crust_Size:    Thick, Thin
+3. Crust_Shade:   Gray, White, Dark
+4. Filling_Size:  Thick, Thin
+5. Filling_Shade: Gray, White, Dark
