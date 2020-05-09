@@ -10,5 +10,10 @@ rl.on('line', (line) => {
 });
 rl.on('close', () => {
   const headingRow = data.shift();
-  classifier.bayesDiscrete(data, {classColumn: 5, headingRow});
+  const trained = classifier.bayesDiscrete(data, {classColumn: 5, headingRow});
+
+  const testInstance = ['Square', 'Thick', 'Gray', 'Thin', 'White'];
+  const classification = trained.classify(testInstance, {debug: true});
+
+  console.log(testInstance, classification);
 });
