@@ -30,11 +30,12 @@ rl.on('line', (line) => {
   }
 });
 rl.on('close', () => {
-  const trained = classifier.bayesDiscrete(data, {classColumn, headingRow});
+  const trained = classifier.bayesDiscrete(data.slice(0, 8), {classColumn, headingRow});
 
   let testInstance = [...data.pop()]
   testInstance.splice(classColumn, 1);
-  const classification = trained.classify(testInstance, {debug: true});
+  console.log(trained.debug());
+  const classification = trained.classify(testInstance);
 
 //  console.log(testInstance, classification,
 //    headingRow
